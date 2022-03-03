@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     },
     copy: {
       npm_dist: { // creates the source file for the npm version
-        src: 'assets/js/atcb.js', 
+        src: 'assets/js/atcb.js',
         dest: 'npm_dist/atcb_npm.js',
         options: {
           process: function (content) {
