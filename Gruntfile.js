@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         dest: 'npm_dist/atcb_npm.js',
         options: {
           process: function (content) {
-            content = content.replace('atcb_addToCalendar', 'addToCalendar');
+            content = content.replace(/atcb_addToCalendar/gm, 'addToCalendar');
             return content.replace(/\/\/ START INIT[\s\S]*?\/\/ END INIT/g,"export { atcb_init, addToCalendar };");
           }
         }

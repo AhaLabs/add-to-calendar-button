@@ -261,7 +261,7 @@ function atcb_generate(button, buttonId, data) {
     buttonTrigger.addEventListener('touchstart', () => atcb_toggle(data, buttonTrigger), {passive: true});
     buttonTrigger.addEventListener('mouseenter', () => addToCalendar(data, buttonTrigger));
   }
-  buttonTrigger.addEventListener('focus', () => atcb_addToCalendar(data, buttonTrigger));
+  buttonTrigger.addEventListener('focus', () => addToCalendar(data, buttonTrigger));
   buttonTrigger.addEventListener('keydown', function(event) { // trigger click on enter as well
     if (event.key == 'Enter') {
       atcb_toggle(data, buttonTrigger);
@@ -394,12 +394,12 @@ function atcb_toggle(data, button) {
   if (button.classList.contains('active')) {
     atcb_close();
   } else {
-    atcb_addToCalendar(data, button);
+    addToCalendar(data, button);
   }
 }
 
 // show the dropdown list + background overlay
-function atcb_addToCalendar(data, placeBelow) {
+function addToCalendar(data, placeBelow) {
   // abort early if an add-to-calendar dropdown already opened
   if (document.querySelector('.atcb_list')) return
 
