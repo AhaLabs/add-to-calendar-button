@@ -666,4 +666,4 @@ function atcb_generate_time(data, style = 'delimiters', targetCal = 'general') {
 
 
 
-export { atcb_init, addToCalendar };
+module.exports = { atcb_init, addToCalendar };
