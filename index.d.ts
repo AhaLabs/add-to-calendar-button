@@ -7,7 +7,7 @@ declare module 'add-to-calendar-button' {
       name?: string;
       description?: string;
       startDate: ISO8601Date | "today";
-      endDate?: ISO8601Date;
+      endDate: ISO8601Date;
       startTime?: ISO8601Time;
       endTime?: ISO8601Time;
       location?: string;
