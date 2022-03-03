@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         options: {
           process: function (content) {
             content = content.replace(/atcb_addToCalendar/gm, 'addToCalendar');
-            return content.replace(/\/\/ START INIT[\s\S]*?\/\/ END INIT/g,"export { atcb_init, addToCalendar };");
+            return content.replace(/\/\/ START INIT[\s\S]*?\/\/ END INIT/g,"module.exports = { atcb_init, addToCalendar };");
           }
         }
       }
